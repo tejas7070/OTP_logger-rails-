@@ -1,0 +1,14 @@
+<h2>Enter OTP</h2>
+
+<%= form_with url: verify_otp_path, method: :post, local: true do %>
+  <%= hidden_field_tag :email, @user.email %>
+
+  <div>
+    <%= label_tag :otp, "One Time Password" %><br>
+    <%= text_field_tag :otp, nil, required: true %>
+  </div>
+  <br>
+  <div>
+    <%= submit_tag "Verify & Login" %>
+  </div>
+<% end %>

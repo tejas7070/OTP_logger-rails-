@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+<h2>Sign in with Email</h2>
+
+<%= form_for(:user, url: send_otp_path, html: { data: { turbo: false } }) do |f| %>
+  <div>
+    <%= f.label :email %><br>
+    <%= f.email_field :email, autofocus: true, required: true %>
+  </div>
+  <br>
+  <div>
+    <%= f.submit "Send OTP" %>
+  </div>
+<% end %>
