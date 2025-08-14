@@ -1,5 +1,5 @@
 class Users::SessionsController < Devise::SessionsController
-  skip_before_action :verify_authenticity_token, only: [:send_otp, :verify_otp]
+  skip_before_action :verify_authenticity_token, only: [ :send_otp, :verify_otp ]
 
   def new
     # Step 1: Show email input
@@ -7,7 +7,7 @@ class Users::SessionsController < Devise::SessionsController
   end
 
   def destroy
-   super 
+   super
   end
 
   def send_otp
